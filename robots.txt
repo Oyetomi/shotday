@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oyetomi.github.io/shotday/sitemap.xml

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Injection Site Rotation Planner — Free 8-Week GLP-1 Rotation Schedule</title>
+<meta name="description" content="Free injection site rotation planner for weekly GLP-1 shots (Zepbound, Wegovy, Mounjaro, Ozempic). Pick your shot day and sites — get an 8-week rotation calendar so no site gets overused.">
+<link rel="canonical" href="https://oyetomi.github.io/shotday/tools/injection-site-rotation.html">
+<meta property="og:title" content="Injection Site Rotation Planner">
+<meta property="og:description" content="Pick your shot day and sites — get an 8-week rotation calendar.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..650&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Injection Site Rotation Planner",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "url": "https://oyetomi.github.io/shotday/tools/injection-site-rotation.html"
+}
+</script>
+</head>
+<body>
+<nav class="top">
+  <a class="brand" href="../">
+    <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="#C96442" stroke-width="8"/><circle cx="50" cy="50" r="10" fill="#C96442"/><rect x="46" y="6" width="8" height="20" rx="4" fill="#C96442"/></svg>
+    ShotDay
+  </a>
+  <a href="../guides/best-glp1-tracking-apps.html">Guides</a>
+  <a href="dose-schedule.html">Tools</a>
+</nav>
+<main>
+  <p class="eyebrow">Free tool</p>
+  <h1>Injection site rotation planner</h1>
+  <p>Weekly GLP-1 shots go in the <strong>abdomen, front of the thighs, or back of the upper arms</strong> — and the label for every one of them says the same thing: rotate. Reusing the same spot builds up irritation, lumps under the skin, and can affect absorption. This planner spreads your next 8 shots across the sites you actually like using.</p>
+
+  <div class="card">
+    <label for="day">Your shot day</label>
+    <select id="day">
+      <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+      <option>Thursday</option><option>Friday</option><option selected>Saturday</option><option>Sunday</option>
+    </select>
+    <label>Sites you're comfortable using</label>
+    <div id="zones" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:400;margin:0;background:#fff;border:1px solid var(--hair);border-radius:999px;padding:8px 14px"><input type="checkbox" value="Abdomen — left" checked> Abdomen · left</label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:400;margin:0;background:#fff;border:1px solid var(--hair);border-radius:999px;padding:8px 14px"><input type="checkbox" value="Abdomen — right" checked> Abdomen · right</label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:400;margin:0;background:#fff;border:1px solid var(--hair);border-radius:999px;padding:8px 14px"><input type="checkbox" value="Thigh — left" checked> Thigh · left</label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:400;margin:0;background:#fff;border:1px solid var(--hair);border-radius:999px;padding:8px 14px"><input type="checkbox" value="Thigh — right" checked> Thigh · right</label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:400;margin:0;background:#fff;border:1px solid var(--hair);border-radius:999px;padding:8px 14px"><input type="checkbox" value="Upper arm — left"> Upper arm · left</label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:400;margin:0;background:#fff;border:1px solid var(--hair);border-radius:999px;padding:8px 14px"><input type="checkbox" value="Upper arm — right"> Upper arm · right</label>
+    </div>
+    <div style="margin-top:18px"><button class="btn" onclick="render()">Build my 8-week plan</button></div>
+  </div>
+
+  <div id="out" class="tool-result"></div>
+
+  <h2>Rotation rules worth knowing</h2>
+  <ul>
+    <li><strong>Different spot every week.</strong> Same body region is fine — just move at least an inch from the last spot in that region.</li>
+    <li><strong>Abdomen:</strong> stay at least 2 inches away from your navel.</li>
+    <li><strong>Avoid</strong> moles, scars, bruises, and any skin that's tender, red or hard.</li>
+    <li><strong>Arms need help</strong> — the back-of-arm site is hard to reach solo; most people save it for weeks when someone can assist.</li>
+    <li><strong>Absorption is equivalent</strong> across all three regions for GLP-1s, so pick sites by comfort, not by rumor.</li>
+  </ul>
+
+  <div class="card appcta" style="margin-top:32px">
+    <div class="appicon"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="#FAF5EC" stroke-width="8"/><circle cx="50" cy="50" r="10" fill="#FAF5EC"/><rect x="46" y="6" width="8" height="20" rx="4" fill="#FAF5EC"/></svg></div>
+    <div>
+      <h3>Or let the Body Map remember for you</h3>
+      <p>ShotDay's Body Map logs every site, shows cooldown tints on recently used spots, and suggests where to go next. Free forever — no account, on-device.</p>
+      <a class="btn" href="https://apps.apple.com/app/id6789172934">Get ShotDay free</a>
+    </div>
+  </div>
+
+  <p class="meta">Related: <a href="../guides/missed-dose-glp1.html">Missed-dose rules, drug by drug</a> · <a href="dose-schedule.html">Dose schedule calculator</a></p>
+</main>
+<footer>
+  Educational tool, not medical advice. Site guidance summarizes the administration instructions in FDA prescribing information for weekly GLP-1 medications. Your prescriber's instructions always override anything here.
+</footer>
+<script>
+function render() {
+  const zones = [...document.querySelectorAll("#zones input:checked")].map(c => c.value);
+  const out = document.getElementById("out");
+  if (zones.length < 2) { out.innerHTML = "<p class='callout'>Pick at least two sites — rotation needs somewhere to rotate to.</p>"; return; }
+  const dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const target = dayNames.indexOf(document.getElementById("day").value);
+  const now = new Date();
+  let first = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  while (first.getDay() !== target) first.setDate(first.getDate() + 1);
+  let html = "<h2>Your next 8 shots</h2><div class='card' style='padding:6px 0'>";
+  for (let i = 0; i < 8; i++) {
+    const d = new Date(first.getTime() + i * 7 * 86400000);
+    const site = zones[i % zones.length];
+    const label = d.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
+    html += "<div class='week'><div><strong>" + label + "</strong></div><div class='dose'>" + site + "</div></div>";
+  }
+  html += "</div><p class='meta'>Order repeats every " + zones.length + " weeks — each site rests " + (zones.length - 1) + " week" + (zones.length > 2 ? "s" : "") + " between uses. Within a region, move at least an inch from last time.</p>";
+  out.innerHTML = html;
+}
+</script>
+</body>
+</html>
